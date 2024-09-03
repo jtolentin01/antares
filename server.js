@@ -6,7 +6,7 @@ const { Server } = require('socket.io');
 const key = require('ckey');
 const models = require('./src/models/index');
 const app = express();
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 80;
 
 const server = http.createServer(app);
 
