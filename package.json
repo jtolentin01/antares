@@ -1,0 +1,49 @@
+{
+  "name": "antares-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "private": true,
+  "engines": {
+    "node": "19.x"
+  },
+  "scripts": {
+    "start": "nodemon server.js",
+    "build": "cd portal && npm install && npm run build",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix portal && npm run build --prefix portal",
+    "dev": "concurrently \"npm run start\" \"npm --prefix ./portal run start\""
+  },
+  "author": "Jomael G.",
+  "license": "MIT",
+  "dependencies": {
+    "@ladjs/graceful": "^3.2.2",
+    "axios": "^1.7.4",
+    "bree": "^9.2.3",
+    "cabin": "^13.2.6",
+    "chalk": "^4.1.2",
+    "cheerio": "^1.0.0",
+    "ckey": "^1.0.3",
+    "concurrently": "^8.2.2",
+    "cors": "^2.8.5",
+    "cron": "^3.1.7",
+    "csv-parser": "^3.0.0",
+    "express": "^4.19.2",
+    "http": "^0.0.1-security",
+    "https-proxy-agent": "^7.0.5",
+    "json-stringify-safe": "^5.0.1",
+    "mongodb": "^6.7.0",
+    "mongodb-connection-string-url": "^3.0.0",
+    "mongoose": "^8.3.3",
+    "multer": "^1.4.5-lts.1",
+    "node-cron": "^3.0.3",
+    "nodemon": "^3.1.0",
+    "ora": "^5.4.1",
+    "otplib": "^12.0.1",
+    "path": "^0.12.7",
+    "puppeteer": "^18.1.0",
+    "signale": "^1.4.0",
+    "socket-io": "^1.0.0",
+    "socket.io": "^4.7.5",
+    "xlsx": "^0.18.5"
+  }
+}
