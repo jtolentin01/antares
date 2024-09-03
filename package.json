@@ -13,7 +13,7 @@
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix portal && npm run build --prefix portal",
     "dev": "concurrently \"npm run start\" \"npm --prefix ./portal run start\""
   },
-  "author": "Jomael G.",
+  "author": "Niel T.",
   "license": "MIT",
   "dependencies": {
     "@ladjs/graceful": "^3.2.2",
