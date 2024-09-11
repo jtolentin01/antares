@@ -2,7 +2,10 @@ const puppeteer = require('puppeteer');
 const delay = (ms) => {
     return new Promise(resolve => setTimeout(resolve, ms));
 };
-
+const randomDelay = (min, max) => {
+    const delay = Math.random() * (max - min) + min;
+    return new Promise((resolve) => setTimeout(resolve, delay));
+};
 const nativeInit = async (req, res, next) => {
     try {
         const { urls } = req.body;
@@ -38,6 +41,7 @@ const nativeInit = async (req, res, next) => {
         let results = [];
 
         const scrapePage = async (url) => {
+            await randomDelay(500,3000);
             const page = await incognito.newPage();
             let attempts = 0;
             let captchaDetected = false;
